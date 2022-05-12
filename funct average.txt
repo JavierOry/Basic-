@@ -1,0 +1,29 @@
+
+#include <iostream>
+
+using namespace std;
+
+void showAverage(int, int, int);
+
+int main()
+{
+
+	int value1, value2, value3;
+	
+
+	cout << "Enter three integers and I will display ";
+	cout << "their average: ";
+	cin >> value1 >> value2 >> value3;
+
+ 
+	showAverage(value1, value2, value3);	  
+	return 0;
+}
+
+
+
+void showAverage(int num1, int num2, int num3)
+
+{
+	cout << "The average is " << ((num1 + num2 + num3)/3) << endl;
+}

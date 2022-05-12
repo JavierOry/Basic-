@@ -1,0 +1,55 @@
+// This program demonstrates a function with three parameters.
+
+#include <iostream>
+using namespace std;
+
+// Function prototype
+
+void showAvg(int, int, int, int&);
+int showAvg(int, int, int);
+
+int main()
+
+{
+
+	int value1, value2, value3;
+
+	int avg = 0;
+
+	// Get 3 integers
+	//cout << "Enter three integers and I will display ";
+	//cout << "their sum: ";
+	//cin >> value1 >> value2 >> value3;
+
+	value1 = 5;
+	value2 = 10;
+	value3 = 15;
+
+	avg = showAvg(value1, value2, value3);	  
+
+
+
+  cout << "The avg is " << avg << endl;
+  showAvg(value1, value2, value3, avg);
+
+  cout << "The avg is " << avg << endl;
+
+	return 0;
+}
+
+//*****************************************************************
+// Definition of function showSum                 *
+// Displays the sum of the 3 integers passed into its parameters. *
+//*****************************************************************
+
+int showAvg(int num1, int num2, int num3)
+
+{
+	return (num1 + num2 + num3)/3;
+}
+
+void showAvg(int num1, int num2, int num3, int &refAvg)
+
+{
+	refAvg = (num1 + num2 + num3)/3;
+}

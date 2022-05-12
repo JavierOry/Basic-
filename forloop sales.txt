@@ -1,0 +1,51 @@
+#include <iostream>
+
+#include <iomanip>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+	int numDays;      // Number of days
+
+	double total = 0.0;   // Accumulator, initialized with 0
+
+
+
+	// Get the number of days
+
+	cout << "For how many days do you have sales figures? ";
+
+	cin >> numDays;
+
+
+
+	// Get the sales for each day and accumulate a total  
+
+	for (int day = 1; day <= numDays; day++) // day is the counter
+
+	{	double sales;
+
+	
+
+		cout << "Enter the sales for day " << day << ": ";
+
+		cin >> sales;
+
+		total = total + sales;   // Accumulate the running total
+
+	}
+
+	// Display the total sales
+
+	cout << fixed << showpoint << setprecision(2);
+
+	cout << "The total sales is $" << total << endl;
+
+	return 0;
+
+}

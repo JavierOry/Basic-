@@ -1,0 +1,39 @@
+// Arrays
+// This program stores employee work hours in an int array.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+             // 0 1 2 3 4 5
+  int hours[6]; // hours [5][8][1][2][9][3]  
+
+  // Holds hours worked for 6 employees 
+		 
+	// Input hours worked by each employee
+
+   hours[0] = 5;
+
+	 hours[1] = 8;
+	 hours[2] = 1;
+	 hours[3] = 2;
+	 hours[4] = 9;
+	 hours[5] = 3;
+
+
+	// Display the contents of the array
+
+	cout << "The hours you entered are:";
+
+	cout << " " << hours[0];
+	cout << " " << hours[1];
+	cout << " " << hours[2];
+	cout << " " << hours[3];
+	cout << " " << hours[4];
+	cout << " " << hours[5] << endl;
+
+	return 0;
+
+}

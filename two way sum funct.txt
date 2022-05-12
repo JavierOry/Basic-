@@ -1,0 +1,57 @@
+// This program demonstrates a function with three parameters.
+
+#include <iostream>
+using namespace std;
+
+// Function prototype
+
+void showSum(int, int, int);
+int showSum2(int, int, int);
+
+int main()
+
+{
+
+	int value1, value2, value3;
+
+	int sum=0;
+
+	// Get 3 integers
+
+	//cout << "Enter three integers and I will display ";
+
+	//cout << "their sum: ";
+
+	//cin >> value1 >> value2 >> value3;
+
+	value1 = 5;
+	value2 = 10;
+	value3 = 15;
+
+    // Call showSum, passing 3 arguments.	
+
+	showSum(value1, value2, value3);
+	sum = showSum2(value1, value2, value3);	  
+
+    cout << "The sum is " << sum << endl;
+	return 0;
+
+}
+//*****************************************************************
+
+// Definition of function showSum                 *
+// Displays the sum of the 3 integers passed into its parameters. *
+//*****************************************************************
+
+void showSum(int num1, int num2, int num3)
+
+{
+	cout << "The sum is " << (num1 + num2 + num3) << endl;
+}
+
+
+int showSum2(int num1, int num2, int num3)
+
+{
+	return (num1 + num2 + num3);
+}

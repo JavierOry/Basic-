@@ -1,0 +1,59 @@
+
+// This program demonstrates two value-returning functions.
+
+// The square function is called in a mathematical statement.
+
+#include <iostream>
+
+#include <iomanip>
+
+using namespace std;
+
+
+
+//Function prototypes
+double calculateAreaOfCircle(int);
+
+int main()
+
+{
+
+  double area;        // Holds the circle's area
+  cout << "This program calculates the area of a circle.\n";
+
+
+
+  // Set the numeric output formatting
+  cout << fixed << showpoint << setprecision(2);
+
+  // Caclulate the area of the circle
+  for (int radius=1; radius<=5; radius++)
+
+  {
+   area = calculateAreaOfCircle(radius);
+   cout << "Area of a circle is for radius " << radius << " is " << area << "\n";
+
+  }
+  return 0;
+
+}
+//******************************************************
+// Definition of function calculateAreaOfCircle    *
+//******************************************************
+
+double calculateAreaOfCircle(int r)
+
+{
+
+  const double PI = 3.14159; // Constant for pi
+
+  double area;  
+  // Set the numeric output formatting
+  cout << fixed << showpoint << setprecision(2);
+
+  // Caclulate the area of the circle
+  area = PI * r * r;
+
+  return area;
+
+}

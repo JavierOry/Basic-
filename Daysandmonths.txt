@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+// This program has constants and a variable.
+// This program shows variable initialization.
+
+#include <iostream>
+
+#include <string>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+  string month = "February";  // month is initialized to "February"  
+
+	int year,           // year is not initialized
+	
+	  days = 28;        // days is initialized to 28
+
+	year = 2007;         // Now year is assigned a value.
+	cout << "In "  << year << " " << month 
+
+		 << " had " << days << " days.\n";
+
+
+
+	return 0;
+
+}

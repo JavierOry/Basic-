@@ -1,0 +1,50 @@
+// This program uses reference variables as function parameters.
+
+#include <iostream>
+using namespace std;
+
+// Function prototypes. Both functions use reference variables
+// as parameters.
+
+void doubleNum(int &);
+void getNum(int &);
+
+int main()
+
+{
+	int value;
+	
+	// Call getNum to get a number and store it in value
+	getNum(value);
+	// Call doubleNum to double the number stored in value
+	doubleNum(value);
+	// Display the resulting number
+
+	cout << "That value doubled is " << value << endl;
+	return 0;
+}
+
+//*************************************************
+// Definition of getNum              *
+// The parameter userNum is a reference variable. *
+// A user entered value is stored in userNum.   *
+//*************************************************
+
+void getNum(int &userNum)  // &userNum -> value [40]
+
+{					//refVar /
+	cout << "Enter a number: ";
+	cin >> userNum;
+}
+
+//*************************************************
+// Definition of doubleNum            *
+// The parameter refVar is a reference variable. *
+// The value in refVar is doubled.        *
+//*************************************************
+
+void doubleNum (int &refVar)
+
+{
+	refVar = refVar * 2;
+}

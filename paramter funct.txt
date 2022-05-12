@@ -1,0 +1,31 @@
+// This program demonstrates a function with a parameter.
+
+#include <iostream>
+using namespace std;
+
+// Function prototype
+void displayValue(int);
+
+int main()
+
+{ 
+  int i;
+  i = 5;
+  cout << "I am passing 5 to displayValue function.\n";
+  displayValue(i);	// Call displayValue with argument 5
+  cout << "Now I am back in main.\n";
+  return 0;
+}
+
+
+
+//*********************************************************
+// Definition of function displayValue          *
+// It uses an integer parameter whose value is displayed. *
+//*********************************************************
+
+void displayValue(int num)  
+
+{
+	cout << "The value is " << num << endl;
+}

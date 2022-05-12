@@ -1,0 +1,124 @@
+// This program implements a Rectangle class.
+#include <iostream>
+using namespace std;
+
+// Rectangle class declaration
+class Rectangle
+
+{
+	private:
+		double length;
+		double width;
+	public:
+		void  setLength(double);
+   	void  setWidth(double);
+		double getLength();
+		double getWidth();
+		double getArea();
+
+};
+
+// Member function implementation section
+
+//*******************************************************************
+//           Rectangle::setLength             *
+// This function sets the value of the member variable length.   *
+// If the argument passed to the function is zero or greater, it is *
+// copied into length. If it is negative, 1.0 is assigned to length.*
+//*******************************************************************
+
+void Rectangle::setLength(double len)
+
+{
+  if (len >= 0)
+  {
+   length = len;
+  }
+  else
+  {  
+    length = 1.0;
+    cout << "Invalid length. Using a default value of 1.\n";
+  }
+}
+
+//*******************************************************************
+//           Rectangle::setWidth             *
+// This function sets the value of the member variable width.    *
+// If the argument passed to the function is zero or greater, it is *
+// copied into width. If it is negative, 1.0 is assigned to width. *
+//*******************************************************************
+
+void Rectangle::setWidth(double w)
+
+{
+  if (w >= 0)
+  {
+    width = w;
+  }
+  else
+  {  
+    width = 1.0;
+    cout << "Invalid width. Using a default value of 1.\n";
+  }
+}
+
+//********************************************************************
+//            Rectangle::getLength            *
+// getLength returns the value in the private member variable length.*
+//********************************************************************
+double Rectangle::getLength()
+
+{
+	return length;
+}
+
+//********************************************************************
+//            Rectangle::getWidth            *
+// getWidth returns the value in the private member variable width. *
+//********************************************************************
+
+double Rectangle::getWidth()
+{
+	return width;
+}
+
+//********************************************************************
+//            Rectangle::getArea             *
+// getArea calculates and returns the area of the rectangle.     *
+//********************************************************************
+
+double Rectangle::getArea()
+
+{
+	return length * width;
+}
+//*******************************************************************
+//               main                 *
+//*******************************************************************
+
+int main()
+
+{
+	Rectangle rectangle1;     // Declare a Rectangle object
+	double rectangleLength, rectangleWidth;
+
+	//Get box length and width
+	cout << "This program will calculate the area of a rectangle.\n";
+	cout << "What is the length? ";
+	cin >> rectangleLength;
+	cout << "What is the width? ";
+	cin >> rectangleWidth;
+
+	// Call member functions to set box dimensions 
+	rectangle1.setLength(rectangleLength);
+  rectangle1.setWidth(rectangleWidth);
+
+	// Call member functions to get box information to display
+	cout << "\nHere is the rectangle's data:\n";
+	cout << "Length: " << rectangle1.getLength() << endl;
+	cout << "Width : " << rectangle1.getWidth() << endl;
+	cout << "Area : " << rectangle1.getArea()  << endl;
+
+	return 0;
+
+}

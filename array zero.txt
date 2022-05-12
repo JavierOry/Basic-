@@ -1,0 +1,53 @@
+// This program stores employee work hours in an int array. It uses
+// one for loop to input the hours and another for loop to display them.
+
+#include <iostream>
+using namespace std;
+
+int main()
+
+{
+
+  const int NUM_EMPLOYEES = 6;   
+
+ 			 //       0 1 2 3 4 5
+
+  int hours[6]; // hours |0|0|0|0|0|0|  
+  int count;           // Loop counter
+
+	// Input hours worked by each employee
+
+  cout << "Enter the hours worked by " << NUM_EMPLOYEES 
+    << " employees: ";
+
+		  
+
+  for (count = 0; count < 6; count++) // count [5]
+
+  {
+   hours[count] = 0;
+  }
+
+  // hours[0] = 0;
+  // hours[1] = 0;
+  // hours[2] = 0;
+  // hours[3] = 0;
+  // hours[4] = 0;
+  // hours[5] = 0;
+
+
+	// Display the contents of the array
+	cout << "The hours you entered are:";
+
+	for (count = 0; count < NUM_EMPLOYEES; count++)
+
+    {
+		cout << " " << hours[count];
+    }
+		
+
+	cout << endl;
+
+	return 0;
+
+}

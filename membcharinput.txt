@@ -1,0 +1,107 @@
+// This menu-driven program shows how relational operators can be 
+
+// used to compare characters. Character inputs are tested to make
+
+// sure they are within the set of legal menu choices. 
+
+#include <iostream>
+
+#include <iomanip>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+// Constants for membership rates
+
+  const double ADULT_RATE = 40.0;
+
+	const double CHILD_RATE = 20.0;
+
+  const double SENIOR_RATE = 30.0;
+
+  
+
+	char choice;     // Menu choice
+
+  int months;      // Number of months
+
+  double charges;    // Monthly charges
+
+
+
+	// Display the menu and get the user's choice
+
+	cout << "  Health Club Membership Menu\n";
+
+	cout << "A. Standard Adult Membership\n";
+
+	cout << "B. Child Membership\n";
+
+	cout << "C. Senior Citizen Membership\n";
+
+	cout << "D. Quit the Program\n\n";
+
+	cout << "Enter your choice: ";
+
+	cin.get(choice);
+
+
+
+	// Set the numeric output formatting
+
+	cout << fixed << showpoint << setprecision(2);
+
+
+
+	if (choice < 'A' || choice > 'D')
+
+	{	cout << "The valid choices are A through D.\n";
+
+		cout << "Run the program again and select one of those.\n";
+
+	}
+
+	else if (choice == 'A')
+
+	{	cout << "For how many months? ";
+
+		cin >> months;
+
+		charges = months * ADULT_RATE;
+
+		cout << "The total charges are $" << charges << endl;
+
+	}
+
+	else if (choice == 'B')
+
+	{	cout << "For how many months? ";
+
+		cin >> months;
+
+		charges = months * CHILD_RATE;
+
+		cout << "The total charges are $" << charges << endl;
+
+	}
+
+	else if (choice == 'C')
+
+	{	cout << "For how many months? ";
+
+		cin >> months;
+
+		charges = months * SENIOR_RATE;
+
+		cout << "The total charges are $" << charges << endl;
+
+	}
+
+	return 0;
+
+}

@@ -1,0 +1,66 @@
+// This program uses the Sale class. This file should be
+// combined into a project along with the Sale.h file.
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+class Sale
+
+{
+
+ private:
+  double taxRate;
+  double total;
+
+  void calcSale(double cost)
+  { total = cost + (cost * taxRate); }
+
+ public:
+  // Constructor with 2 parameters handles sales with tax
+  Sale(double rate, double cost)  
+
+  { taxRate = rate; calcSale(cost);
+  }
+
+  // Constructor with 1 parameter handles tax-exempt sales
+
+  Sale(double cost)      
+  { taxRate = 0; total = cost;
+  }
+
+  // Default constructor
+  Sale()
+  { taxRate = 0.0; total = 0.0;
+  }
+
+  double getTotal() 
+  { return total;
+  }
+};
+
+int main()
+
+{  
+	// Define a Sale object with 6% sales tax calculated on a $24.95 sale
+	Sale cashier1(.06, 24.95);
+
+
+	// Define a Sale object with a tax-exempt $24.95 sale 
+	Sale cashier2(24.95);
+
+	// Format the output
+	cout << fixed << showpoint << setprecision(2);
+
+
+	// Display the after-tax price for each Sale object
+	cout << "\nWith a 0.06 sales tax rate, the total\n";
+	cout << "of the $24.95 sale is $";
+	cout << cashier1.getTotal() << endl;
+
+
+	cout << "\nOn a tax-exempt purchase, the total\n";
+	cout << "of the $24.95 sale is, of course, $";
+	cout << cashier2.getTotal() << endl;  
+
+	return 0;
+}

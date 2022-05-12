@@ -1,0 +1,39 @@
+#include <iostream>
+
+#include <iomanip>
+
+
+
+using namespace std;
+
+
+
+int main() 
+
+{
+
+double purchasePrice, tax, discount, total;
+ discount=0;
+ cout<<"Enter the purchase price " ;
+
+
+ cin>>purchasePrice;
+ if (purchasePrice > 50) {
+
+  discount = purchasePrice * 0.10;
+
+ }
+ tax = purchasePrice*0.04;
+ total = purchasePrice + tax - discount;
+
+ cout << fixed << showpoint << setprecision(2);
+ cout<<"Purchase  tax  discount total"<<endl;   
+ cout<<purchasePrice<<setw(8)<<tax<<setw(8)<<discount<<setw(8)<<total;
+
+
+
+ return 0;
+
+
+
+}
